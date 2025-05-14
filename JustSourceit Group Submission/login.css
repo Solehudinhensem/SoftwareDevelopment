@@ -1,0 +1,35 @@
+body {
+  background-color: #9f9da7;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #2b3e51;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#text{
+
+		height: 25px;
+		border-radius: 5px;
+		padding: 4px;
+		border: solid thin #aaa;
+		width: 100%;
+	}
+
+	#button{
+
+		padding: 10px;
+		width: 100px;
+		color: white;
+		background-color: #329dd5;
+		border: none;
+	}
+
+	#box{
+    margin: auto;
+		width: 300px;
+		padding: 20px;
+	}

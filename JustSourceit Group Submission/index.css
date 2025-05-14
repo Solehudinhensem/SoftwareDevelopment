@@ -1,0 +1,18 @@
+#myHeader{
+	font-size: 50px;
+	text-align: center;
+	border:5px solid black;
+}
+body {
+     background-image: url('myPicture3.gif');
+}
+
+.button-container {
+  text-align: center; 
+  margin-top: 20px; 
+ }
+
+ .button-container button {
+   margin: 0 10px; 
+   width: 100px;
+ }

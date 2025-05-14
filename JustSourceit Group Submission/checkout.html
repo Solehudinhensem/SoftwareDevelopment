@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+</head>
+ <style>
+        body{
+         background-image:url("myPicture5.jpg");
+         background-size: cover;
+        }
+ </style>
+<body>
+    <h1 style="text-align: center;">Payment Page</h1>
+    <h1 style="text-align: center;">Total Price: RM <span id="totalPrice"></span></h1>
+    <h2 style="text-align: center;">Products: <span id="productList"></span></h2>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const totalPrice = urlParams.get('total');
+        const productNamesString = urlParams.get('productNames');
+
+        // Split the product names string into an array
+        const productNames = productNamesString.split(',');
+
+        // Get the element where you want to display the total price
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        // Display the total price
+        totalPriceElement.textContent = totalPrice;
+
+        // Display the product names
+        const productListElement = document.getElementById('productList');
+        productListElement.textContent = productNamesString;
+
+        // Function to redirect to invoice page with total price appended to the URL
+        function redirectToInvoice() {
+            window.location.href = `invoice.html?total=${totalPrice}`;
+        }
+    </script>
+
+    <button onclick="window.location.href='addtocart.html'" id="button" style="background-color:red;display: block; margin: 0 auto;">Discard</button>
+    <button onclick="redirectToInvoice()" style="background-color:lightgreen; display: block; margin: 0 auto;">Click Here To Pay Now!</button>
+</body>
+</html>
